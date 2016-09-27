@@ -40,16 +40,15 @@ function tableScroll() {
       }
     });
   });
+}
 
-  /*$('.table-scroll').each(function () {
-    var settings = {
-      mouseWheelSpeed: 80,
-      showArrows: $(this).is('.arrow'),
-      autoReinitialise: true,
-      autoReinitialiseDelay: 0
-    };
-    $(this).jScrollPane(settings);
-  });*/
+function tableResponsive() {
+  $('.table-fixed td').each(function () {
+    var item = $(this);
+    var th = item.closest('.table-fixed').find('th').eq(item.index()).text();
+    item.wrapInner('<div class="td-inner" />');
+    item.attr('data-th',th);
+  });
 }
 
 function layoutHeight() {
@@ -83,6 +82,7 @@ $(document).ready(function(){
   tableScroll();
   layoutHeight();
   navbarToggle();
+  tableResponsive();
 });
 
 $(window).resize(function(){

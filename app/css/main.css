@@ -100,12 +100,9 @@ body * {
   display: flex;
   background: #efeff4; }
 
-.table-box {
-  margin-bottom: 30px; }
-
 .content-box {
   border: 1px solid #ebeff2;
-  padding: 19px 18px 28px;
+  padding: 19px 18px 19px;
   margin-bottom: 20px; }
 
 .table-scroll tbody.jspScrollable {
@@ -123,7 +120,12 @@ body * {
     font-weight: normal;
     line-height: 24px;
     padding-left: 24px;
-    padding-right: 24px; }
+    padding-right: 24px;
+    white-space: nowrap; }
+    @media (max-width: 1200px) {
+      .table-fixed thead tr th {
+        padding-left: 8px;
+        padding-right: 8px; } }
     .table-fixed thead tr th.text-center {
       padding-left: 0;
       padding-right: 15px; }
@@ -135,9 +137,13 @@ body * {
     .table-fixed tbody tr td {
       border-top: 0;
       border-right: 2px solid #dedee1;
-      line-height: 24px;
+      border-bottom: 1px solid #efeff4;
+      line-height: 23px;
       padding: 8px 24px 8px 24px;
       white-space: nowrap; }
+      @media (max-width: 1200px) {
+        .table-fixed tbody tr td {
+          padding: 8px 8px 8px 8px; } }
       .table-fixed tbody tr td.text-center {
         padding-left: 0;
         padding-right: 0px; }
@@ -163,12 +169,37 @@ body * {
 .table-single .jspScrollable tr td {
   padding-right: 17px; }
 
+.table-box {
+  margin-bottom: 30px; }
+
 .table .edit {
   color: #5097df; }
 
 .table .remove {
   color: #ff6161;
   margin-left: 16px; }
+
+@media (max-width: 1024px) {
+  .table-fixed thead th {
+    display: none; }
+  .table-fixed tbody tr td {
+    display: block;
+    width: 100%;
+    border: 0;
+    text-align: left;
+    padding: 8px 16px !important;
+    white-space: normal; }
+    .table-fixed tbody tr td .td-inner {
+      float: left;
+      width: 60%; }
+      .table-fixed tbody tr td .td-inner * {
+        text-align: left; }
+    .table-fixed tbody tr td:before {
+      content: attr(data-th);
+      display: block;
+      float: left;
+      width: 40%;
+      text-align: left; } }
 
 /* fonts */
 .clear {
