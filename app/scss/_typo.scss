@@ -1,0 +1,10 @@
+.ctext {
+  margin-bottom: 40px;
+  @extend  %clear;
+  h2:first-child,
+  h3:first-child,
+  h4:first-child,
+  h5:first-child {
+    margin-top: 0;
+  }
+}

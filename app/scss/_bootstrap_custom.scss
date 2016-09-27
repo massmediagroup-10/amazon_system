@@ -1,0 +1,29 @@
+.input-lg {
+  height: 41px;
+}
+.btn-lg {
+  font-size: 14px;
+  min-width: 130px;
+}
+.navbar-collapse {
+  padding: 0;
+}
+.btn-primary {
+  background: #5d9cec;
+  border-color: #5d9cec;
+  &:hover{
+    background: #5088ce;
+    border-color: #5088ce;
+  }
+}
+.input-group .form-control{
+  height: 41px;
+  line-height: 29px;
+}
+.file-caption-name {
+  overflow: visible;
+}
+.input-group-btn>.btn{
+  height: 41px;
+  line-height: 26px;
+}

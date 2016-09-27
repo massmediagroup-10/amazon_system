@@ -1,0 +1,166 @@
+body *{
+	-moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 15px;
+	position: relative;
+	z-index: 1;
+	@extend %clear;
+}
+
+.main {
+  display: flex;
+  overflow-x: hidden;
+  .sidebar {
+    align-items: stretch;
+    transition: 350ms all ease;
+    @media (max-width:768px){
+      transform: translateX(-200px);
+      position: absolute;
+      z-index: 3;
+      bottom: 0;
+      top: 120px;
+      width: 200px;
+      &.active {
+        transform: translateX(0px);
+      }
+    }
+  }
+  .contents {
+    align-items: stretch;
+    padding-left: 20px;
+    transition: 350ms all ease;
+    @media (max-width:768px){
+      padding-left: 15px;
+      &.discover {
+        transform: translateX(200px);
+      }
+    }
+  }
+}
+
+.footer {
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	z-index:2;
+	overflow:hidden;
+
+	&_placeholder{
+		height: 0;
+	}
+}
+
+.index{
+  display: -ms-flexbox;
+  display: flex;
+  background: #efeff4;
+}
+
+.table-box {
+  margin-bottom: 30px;
+}
+
+.content-box {
+  border: 1px solid #ebeff2;
+  padding: 19px 18px 28px;
+  margin-bottom: 20px;
+  @extend %clear;
+}
+
+.table-scroll {
+  tbody {
+    &.jspScrollable {
+      width: calc(100% + 15px) !important;
+    }
+  }
+}
+
+.table-fixed {
+  border: 1px solid #ebeff2;
+  margin-bottom: 0;
+  @media (max-width:991px){
+    //min-width: 600px;
+    width: 100%;
+  }
+  thead {
+    tr {
+      th {
+        background: #8e8e93;
+        color: #fff;
+        font-weight: normal;
+        line-height: 24px;
+        padding-left: 24px;
+        padding-right: 24px;
+        &.text-center {
+          padding-left: 0;
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+  tbody {
+    width: 100%;
+    &.scroll-pane{
+      height: 400px;
+      overflow-y: auto;
+    }
+    tr {
+      td {
+        border-top: 0;
+        border-right: 2px solid #dedee1;
+        line-height: 24px;
+        padding: 8px 24px 8px 24px;
+        white-space: nowrap;
+        &.text-center {
+          padding-left: 0;
+          padding-right: 0px;
+        }
+        &:last-child {
+          border-right: 0;
+        }
+      }
+    }
+  }
+  thead,
+  tbody,
+  tr,
+  td,
+  th {
+    display: block;
+  }
+  tbody td,
+  thead > tr> th {
+    float: left;
+    border-bottom-width: 0;
+  }
+  tr:nth-child(even) td{
+    background: #efeff4;
+  }
+}
+
+.table {
+  &-single {
+    tbody tr td {
+      padding-left: 7px;
+      padding-right: 7px;
+    }
+    .jspScrollable {
+      tr td {
+        padding-right: 17px;
+      }
+    }
+
+  }
+  .edit {
+    color: #5097df;
+  }
+  .remove{
+    color: #ff6161;
+    margin-left: 16px;
+  }
+}

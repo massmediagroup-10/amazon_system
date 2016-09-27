@@ -1,0 +1,60 @@
+.header{
+  position: relative;
+  z-index: 5;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.35);
+  &-logo {
+    line-height: 60px;
+    text-align: center;
+    display: block;
+    img {
+      vertical-align: middle;
+    }
+  }
+  &-search{
+    width: 180px;
+    float: left;
+    position: relative;
+    padding: 10px 0;
+    [type="text"] {
+      background-color: rgb(235, 239, 242);
+      width: 180px;
+      height: 40px;
+      border: 0;
+      border-radius: 18px;
+      outline: none;
+      padding: 0 43px 0 15px;
+    }
+    [type="submit"] {
+      border: 0;
+      background: transparent;
+      position: absolute;
+      top: 16px;
+      right: 10px;
+      font-size: 17px;
+      color: #c4c4cd;
+    }
+  }
+  &-user {
+    float: right;
+    padding: 14px 0 11px;
+    a{
+      color: #797979;
+    }
+    p{
+      color: #797979;
+      margin-right: 20px;
+      margin-bottom: 0;
+      @extend %inline-middle;
+    }
+    img{
+      border-radius: 50%;
+      @extend %inline-middle;
+    }
+  }
+  .navbar-toggle {
+    position: relative;
+    left: 0px;
+    top: 14px;
+    right: auto;
+  }
+}
