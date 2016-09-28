@@ -1,0 +1,83 @@
+@@include('_head.html')
+@@include('_header.html')
+<div class="container-fluid">
+  <div class="main row">
+    <div class="sidebar col-sm-3 col-lg-2">
+      @@include('_sidebar_menu.html')
+    </div>
+    <div class="contents col-xs-12 col-sm-9 col-lg-10">
+      <a href="#" class="back pull-right">Back <i class="fa fa-chevron-right"></i></a>
+      <h4>Add shop</h4>
+      <div class="content-box" id="cb1">
+        <form action="?" class="form">
+          <div class="form-group checkbox-group">
+            <label class="i-checkbox"><input type="checkbox" data-content="cb1"> Add to your shop</label>
+          </div>
+          <div class="content-inner">
+            <div class="row">
+              <div class="col-sm-4 col-lg-2 pull-right btn-group-position"><a href="#" class="btn btn-lg btn-primary">Add</a></div>
+              <div class="col-sm-4 col-lg-5">
+                <div class="form-group">
+                  <label>MWS marketplace Id</label>
+                  <input type="text" class="form-control input-lg" placeholder="Enter your MWS marketplace Id">
+                </div>
+              </div>
+              <div class="col-sm-4 col-lg-5">
+                <div class="form-group">
+                  <label>MWS marketplace Id</label>
+                  <input type="text" class="form-control input-lg" placeholder="Enter your MWS marketplace Id">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4 col-lg-5">
+                <div class="form-group">
+                  <label>AWS access key Id</label>
+                  <input type="text" class="form-control input-lg" placeholder="Enter your AWS access key Id">
+                </div>
+              </div>
+              <div class="col-sm-4 col-lg-5">
+                <div class="form-group">
+                  <label>AWS secret access key</label>
+                  <input type="text" class="form-control input-lg" placeholder="Enter your AWS access key Id">
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="content-box disable" id="cb2">
+        <form action="?" class="form">
+          <div class="form-group">
+            <label class="pull-left i-checkbox"><input type="checkbox" data-content="cb2"> Add to other shop</label>
+          </div>
+          <div class="content-inner">
+            <div class="row">
+              <div class="col-sm-4 col-lg-2 pull-right btn-group-position"><a href="#" class="btn btn-lg btn-primary">Add</a></div>
+              <div class="col-sm-4 col-lg-5">
+                <div class="form-group">
+                  <label>MWS seller Id</label>
+                  <input type="text" class="form-control input-lg" placeholder="Enter your MWS seller Id">
+                </div>
+              </div>
+              <div class="col-sm-4 col-lg-5">
+                <div class="form-group">
+                  <label>MWS AuthToken</label>
+                  <input type="text" class="form-control input-lg" placeholder="Enter your MWS AuthToken">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4 col-lg-5">
+                <div class="form-group">
+                  <label>AWS access key Id</label>
+                  <input type="text" class="form-control input-lg" placeholder="Enter your AWS access key Id">
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  @@include('_footer.html')

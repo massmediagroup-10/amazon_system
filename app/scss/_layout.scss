@@ -66,4 +66,23 @@ body *{
   padding: 19px 18px 19px;
   margin-bottom: 20px;
   @extend %clear;
+
+  &.disable {
+    .content-inner {
+      position: relative;
+      &:before {
+        content: '';
+        @extend %full;
+        z-index: 5;
+        background: rgba(255, 255, 255, 0.6);
+      }
+    }
+    .form-group label {
+      font-weight: normal;
+    }
+    .btn {
+      background: #a2a1a1;
+      border-color: #a2a1a1;
+    }
+  }
 }

@@ -8,3 +8,17 @@
     margin-top: 0;
   }
 }
+.content-box {
+  .form label.i-checkbox{
+    font-weight: bold;
+  }
+}
+.back {
+  font-size: 14px;
+  color: rgb(93, 156, 236);
+  line-height: 74px;
+  text-decoration: none !important;
+  .fa {
+    margin-left: 4px;
+  }
+}

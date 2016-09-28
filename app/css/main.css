@@ -1,5 +1,6 @@
 .input-lg {
-  height: 41px; }
+  height: 41px;
+  font-size: 14px; }
 
 .btn-lg {
   font-size: 14px;
@@ -32,11 +33,11 @@
   vertical-align: middle; }
 
 
+.form-group:after,
 .container:after,
 .content-box:after,
 .button-group:after,
-.ctext:after,
-.form-group:after {
+.ctext:after {
   content: '';
   clear: both;
   font-size: 1px;
@@ -48,6 +49,14 @@
 .button, .header-user p, .header-user img {
   display: inline-block;
   vertical-align: middle; }
+
+.content-box.disable .content-inner:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; }
 
 body * {
   -moz-box-sizing: border-box;
@@ -104,6 +113,17 @@ body * {
   border: 1px solid #ebeff2;
   padding: 19px 18px 19px;
   margin-bottom: 20px; }
+  .content-box.disable .content-inner {
+    position: relative; }
+    .content-box.disable .content-inner:before {
+      content: '';
+      z-index: 5;
+      background: rgba(255, 255, 255, 0.6); }
+  .content-box.disable .form-group label {
+    font-weight: normal; }
+  .content-box.disable .btn {
+    background: #a2a1a1;
+    border-color: #a2a1a1; }
 
 .table-scroll tbody.jspScrollable {
   width: calc(100% + 15px) !important; }
@@ -323,6 +343,17 @@ img {
   .ctext h5:first-child {
     margin-top: 0; }
 
+.content-box .form label.i-checkbox {
+  font-weight: bold; }
+
+.back {
+  font-size: 14px;
+  color: #5d9cec;
+  line-height: 74px;
+  text-decoration: none !important; }
+  .back .fa {
+    margin-left: 4px; }
+
 .form {
   position: relative; }
   .form label.i-checkbox {
@@ -536,8 +567,7 @@ img {
       font-size: 17px;
       color: #c4c4cd; }
   .header-user {
-    float: right;
-    padding: 14px 0 11px; }
+    float: right; }
     .header-user a {
       color: #797979; }
     .header-user p {
@@ -546,6 +576,46 @@ img {
       margin-bottom: 0; }
     .header-user img {
       border-radius: 50%; }
+    .header-user-inner {
+      position: relative; }
+      .header-user-inner > a {
+        display: block;
+        padding: 14px 0 11px; }
+        .header-user-inner > a img {
+          width: 35px;
+          height: 35px; }
+      .header-user-inner:hover ul {
+        display: block; }
+      .header-user-inner ul {
+        width: 180px;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.35);
+        padding: 0;
+        border-radius: 0 0 4px 4px;
+        display: none; }
+        .header-user-inner ul li {
+          list-style: none; }
+          .header-user-inner ul li:last-child {
+            border-radius: 0 0 4px 4px; }
+          .header-user-inner ul li:hover {
+            background: #5d9cec; }
+            .header-user-inner ul li:hover a {
+              color: #fff; }
+          .header-user-inner ul li a {
+            color: #797979;
+            display: block;
+            padding: 5px 10px 5px 17px;
+            line-height: 30px; }
+            .header-user-inner ul li a span {
+              line-height: 22px;
+              display: inline-block; }
+            .header-user-inner ul li a:hover {
+              text-decoration: none; }
+          .header-user-inner ul li .fa {
+            margin-right: 10px; }
   .header .navbar-toggle {
     position: relative;
     left: 0px;
@@ -620,6 +690,9 @@ h4 {
   font-weight: 600;
   margin-top: 29px;
   margin-bottom: 27px; }
+
+.btn-group-position {
+  padding-top: 25px; }
 
 .jspScrollable {
   outline: none; }

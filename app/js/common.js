@@ -8,7 +8,6 @@ function indexHeight() {
 
 function chechboxButton() {
 	$('.i-checkbox  input[type="checkbox"]').change(function(){
-		console.log($(this).prop('checked'));
 		$(this).closest('.i-checkbox').toggleClass('checked');
 	});
 }
@@ -57,6 +56,27 @@ function layoutHeight() {
   });
 }
 
+function contentBox() {
+  var contentBox = $('.content-box:not(.disable)');
+  contentBox.find('[type="checkbox"]').prop('checked',false);
+  contentBox.find('.i-checkbox').addClass('checked');
+
+  $('.content-box [type="checkbox"]').change(function (e) {
+    var that = $(this);
+    var cb = that.data('content');
+
+    //for checkbox prop
+    $('.content-box [type="checkbox"]').prop('checked',false);
+    that.prop('checked',true);
+    //for checkbox view
+    $('.content-box .i-checkbox').removeClass('checked');
+    that.closest('.i-checkbox').addClass('checked');
+    //for content activity view
+    $('.content-box').addClass('disable');
+    $('#'+cb).removeClass('disable');
+  });
+}
+
 function navbarToggle() {
   $('.navbar-toggle').click(function(){
     var navbar = $('.navbar-collapse');
@@ -83,6 +103,7 @@ $(document).ready(function(){
   layoutHeight();
   navbarToggle();
   tableResponsive();
+  contentBox();
 });
 
 $(window).resize(function(){

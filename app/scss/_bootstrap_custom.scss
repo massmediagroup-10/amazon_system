@@ -1,5 +1,6 @@
 .input-lg {
   height: 41px;
+  font-size: 14px;
 }
 .btn-lg {
   font-size: 14px;
@@ -26,4 +27,7 @@
 .input-group-btn>.btn{
   height: 41px;
   line-height: 26px;
+}
+.form-group {
+  @extend %clear;
 }
